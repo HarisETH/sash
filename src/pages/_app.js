@@ -20,7 +20,7 @@ export default function App({ Component, pageProps }) {
   }
 
   return (
-    <section className={`min-h-screen md:py-10 ${inter.className}`}>
+    <section className={`min-h-screen md:px-[10%] lg:px[20%] md:py-10 ${inter.className}`}>
     <div className="px-8 py-8 md:px-24 flex flex-col justify-between w-full items-center ">
     <Nav inter={inter} variable={variable} />
     <Component {...pageProps} />
