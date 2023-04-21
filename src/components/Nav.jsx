@@ -17,6 +17,8 @@ const Nav = ({ inter }) => {
     variable = "resume.md";
   } else if (router.pathname === "/whoami") {
     variable = "whoami.md";
+  }else if (router.pathname === "/projects") {
+    variable = "projects.md";
   } else {
     variable = "";
   }
@@ -30,7 +32,7 @@ const Nav = ({ inter }) => {
 
   return (
     <nav className={`flex items-start w-full justify-between ${inter.className}`}>
-      <h1 className={`text-xl font-semibold flex gap-2 items-center`}> <Mainer /> <BlinkDiv/> </h1>
+      <Link href="/" className={`text-xl font-semibold flex gap-2 items-center`}> <Mainer /> <BlinkDiv/> </Link>
       
       <div className="gap-3 hidden md:flex">
         <Link href="/resume">Resume</Link>

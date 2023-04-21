@@ -1,8 +1,9 @@
 import Image from "next/image";
-
+import Link from "next/link";
+import { useRouter } from "next/router";
 import Nav from "@/components/Nav";
 import * as Icon from "react-feather";
-import { useRouter } from "next/router";
+
 import resume from "./resume";
 import React, { PropsWithChildren } from "react";
 
@@ -27,14 +28,11 @@ const Home = () => {
         </div>
       </div>
 
-      <footer className="flex justify-between mt-12 w-3/4">
-        <p>© 2021 - 2023</p>
-        <div className="flex gap-4">
-          <a href="">license</a>
-          <a href="">rss feed</a>
-          
-        </div>
-      </footer>
+      <div className="flex justify-center gap-6 ">
+        <Link href="/resume" className="hover:text-green-600">resume.md</Link>
+        <Link href="/whoami" className="hover:text-green-600">whoami.md </Link>
+        <Link href="/projects" className="hover:text-green-600">projects.md</Link>
+      </div>
     </main>
   );
 };
