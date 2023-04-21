@@ -1,5 +1,5 @@
 import Link from "next/link";
-
+import { ChakraProvider } from '@chakra-ui/react'
 import { Inter } from 'next/font/google'
 import Nav from '@/components/Nav'
 const inter = Inter({ subsets: ['latin'] })
@@ -20,8 +20,9 @@ export default function App({ Component, pageProps }) {
   }
 
   return (
-    <section className="flex justify-center items-center">
-      <section className={`min-h-screen md:w-1/2 md:py-10 ${inter.className}`}>
+    <ChakraProvider>
+      <section className="flex justify-center items-center bg-black">
+      <section className={`min-h-screen min-w-full lg:w-3/5 md:py-10 ${inter.className}`}>
     <div className="px-8 py-8 md:px-24 flex flex-col justify-between w-full items-center ">
     <Nav inter={inter} variable={variable} />
     <Component {...pageProps} />
@@ -29,9 +30,10 @@ export default function App({ Component, pageProps }) {
     <div className="flex justify-center gap-6 pb-8 text-gray-400 ">
         <Link href="/resume" className="hover:text-green-600">resume.md</Link>
         <Link href="/whoami" className="hover:text-green-600">whoami.md </Link>
-        <Link href="/projects" className="hover:text-green-600">projects.md</Link>
+        {/* <Link href="/projects" className="hover:text-green-600">projects.md</Link> */}
       </div>
     </section>
     </section>
+    </ChakraProvider>
   )
 }

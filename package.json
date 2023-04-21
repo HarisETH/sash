@@ -9,10 +9,15 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@chakra-ui/icons": "^2.0.18",
+    "@chakra-ui/react": "^2.5.5",
+    "@emotion/react": "^11.10.6",
+    "@emotion/styled": "^11.10.6",
     "@nextui-org/react": "^1.0.0-beta.12",
     "@react-aria/grid": "^3.7.0",
     "@react-aria/menu": "^3.9.0",
     "feather-icons": "^4.29.0",
+    "framer-motion": "^10.12.4",
     "next": "13.3.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",

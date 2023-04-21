@@ -1,12 +1,24 @@
 import React from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
-
+import {
+  Menu,
+  MenuButton,
+  MenuList,
+  MenuItem,
+  MenuItemOption,
+  MenuGroup,
+  MenuOptionGroup,
+  MenuDivider,
+  Button,
+} from '@chakra-ui/react'
+import { Icon } from "react-feather";
 const BlinkDiv = () =>{
    return(
     <div className="h-6 w-3 bg-green-600 animate-pulse z-50"></div>
    )
 }
+import { HamburgerIcon } from '@chakra-ui/icons'
 
 
 const Nav = ({ inter }) => {
@@ -32,13 +44,18 @@ const Nav = ({ inter }) => {
 
   return (
     <nav className={`flex items-start w-full justify-between ${inter.className}`}>
-      <Link href="/" className={`text-xl font-semibold flex gap-2 items-center`}> <Mainer /> <BlinkDiv/> </Link>
+      <Link href="/" className={`text-xl text-gray-300 font-semibold flex gap-2 items-center`}> <Mainer /> <BlinkDiv/> </Link>
       
-      {/* <div className="gap-3 hidden md:flex">
-        <Link href="/resume">Resume</Link>
-        <Link href="/whoami">Who Am I </Link>
-        <Link href="/">Back</Link>
-      </div> */}
+      <Menu>
+  <MenuButton className="p-1 rounded-lg hover:bg-gray-950" >
+    <HamburgerIcon color="white" w={8} h={8} />
+  </MenuButton>
+  <MenuList>
+    <Link href="/resume"><MenuItem className="font-semibold hover:bg-gray-200 transition-all ease-linear">Resume 📃</MenuItem></Link>
+    <Link href="/whoami"><MenuItem className="font-semibold hover:bg-gray-200 transition-all ease-linear">WhoAmI 🦖</MenuItem></Link>
+    
+  </MenuList>
+</Menu>
 
     </nav>
   );
