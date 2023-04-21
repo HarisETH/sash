@@ -20,16 +20,18 @@ export default function App({ Component, pageProps }) {
   }
 
   return (
-    <section className={`min-h-screen md:px-[10%] lg:px[20%] md:py-10 ${inter.className}`}>
+    <section className="flex justify-center items-center">
+      <section className={`min-h-screen md:w-1/2 md:py-10 ${inter.className}`}>
     <div className="px-8 py-8 md:px-24 flex flex-col justify-between w-full items-center ">
     <Nav inter={inter} variable={variable} />
     <Component {...pageProps} />
     </div>
-    <div className="flex justify-center gap-6 text-gray-400 ">
+    <div className="flex justify-center gap-6 pb-8 text-gray-400 ">
         <Link href="/resume" className="hover:text-green-600">resume.md</Link>
         <Link href="/whoami" className="hover:text-green-600">whoami.md </Link>
         <Link href="/projects" className="hover:text-green-600">projects.md</Link>
       </div>
+    </section>
     </section>
   )
 }
