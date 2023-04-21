@@ -1,3 +1,4 @@
+import Link from "next/link";
 
 import { Inter } from 'next/font/google'
 import Nav from '@/components/Nav'
@@ -19,9 +20,16 @@ export default function App({ Component, pageProps }) {
   }
 
   return (
-    <section className={`px-8 py-8 md:px-24 flex flex-col w-full items-center min-h-screen md:py-10 ${inter.className}`}>
+    <section className={`min-h-screen md:py-10 ${inter.className}`}>
+    <div className="px-8 py-8 md:px-24 flex flex-col justify-between w-full items-center ">
     <Nav inter={inter} variable={variable} />
     <Component {...pageProps} />
+    </div>
+    <div className="flex justify-center gap-6 text-gray-400 ">
+        <Link href="/resume" className="hover:text-green-600">resume.md</Link>
+        <Link href="/whoami" className="hover:text-green-600">whoami.md </Link>
+        <Link href="/projects" className="hover:text-green-600">projects.md</Link>
+      </div>
     </section>
   )
 }

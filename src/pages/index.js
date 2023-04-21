@@ -28,11 +28,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="flex justify-center gap-6 ">
-        <Link href="/resume" className="hover:text-green-600">resume.md</Link>
-        <Link href="/whoami" className="hover:text-green-600">whoami.md </Link>
-        <Link href="/projects" className="hover:text-green-600">projects.md</Link>
-      </div>
+      
     </main>
   );
 };

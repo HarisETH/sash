@@ -34,11 +34,11 @@ const Nav = ({ inter }) => {
     <nav className={`flex items-start w-full justify-between ${inter.className}`}>
       <Link href="/" className={`text-xl font-semibold flex gap-2 items-center`}> <Mainer /> <BlinkDiv/> </Link>
       
-      <div className="gap-3 hidden md:flex">
+      {/* <div className="gap-3 hidden md:flex">
         <Link href="/resume">Resume</Link>
         <Link href="/whoami">Who Am I </Link>
         <Link href="/">Back</Link>
-      </div>
+      </div> */}
 
     </nav>
   );
