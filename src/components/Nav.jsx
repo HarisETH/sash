@@ -51,8 +51,8 @@ const Nav = ({ inter }) => {
     <HamburgerIcon color="white" w={8} h={8} />
   </MenuButton>
   <MenuList>
-    <Link href="/resume"><MenuItem className="font-semibold hover:bg-gray-200 transition-all ease-linear">Resume 📃</MenuItem></Link>
-    <Link href="/whoami"><MenuItem className="font-semibold hover:bg-gray-200 transition-all ease-linear">WhoAmI 🦖</MenuItem></Link>
+    <Link href="/resume"><MenuItem className="font-medium hover:bg-gray-200 transition-all ease-linear">Resume 📃</MenuItem></Link>
+    <Link href="/whoami"><MenuItem className="font-medium hover:bg-gray-200 transition-all ease-linear">WhoAmI 🦖</MenuItem></Link>
     
   </MenuList>
 </Menu>
