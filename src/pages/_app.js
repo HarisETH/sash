@@ -19,7 +19,7 @@ export default function App({ Component, pageProps }) {
   }
 
   return (
-    <section className={`px-4 py-8 md:px-24 flex flex-col w-full items-center min-h-screen md:py-10 ${inter.className}`}>
+    <section className={`px-8 py-8 md:px-24 flex flex-col w-full items-center min-h-screen md:py-10 ${inter.className}`}>
     <Nav inter={inter} variable={variable} />
     <Component {...pageProps} />
     </section>

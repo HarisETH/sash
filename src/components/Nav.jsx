@@ -32,7 +32,7 @@ const Nav = ({ inter }) => {
     <nav className={`flex items-start w-full justify-between ${inter.className}`}>
       <h1 className={`text-xl font-semibold flex gap-2 items-center`}> <Mainer /> <BlinkDiv/> </h1>
       
-      <div className="flex gap-3">
+      <div className="gap-3 hidden md:flex">
         <Link href="/resume">Resume</Link>
         <Link href="/whoami">Who Am I </Link>
         <Link href="/">Back</Link>
